@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f6f3;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 32px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 110px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .hero-container {
+            position: relative;
+            text-align: center;
+            width: 100%; /* 부모 요소 크기 */
+    height: auto; 
+        }
+
+        .hero-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            position: absolute;
+        }
+        .background-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+        .hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            background: linear-gradient(45deg, #f44336, #2196f3, #ffeb3b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 16px;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+            margin-top: 150px;
+        }
+        .hover-container {
+            position: absolute;
+            width: 330px;
+            height: 320px;
+           margin-left: 520px;
+            margin-top: 320px;
+           
+        }
+
+        .hover-container1{
+            position: absolute;
+            width: 320px;
+            height: 310px;
+           margin-left: 880px;
+            margin-top: 320px;
+           
+        }
+        
+        .hover-container2{
+            position: absolute;
+            width: 320px;
+            height: 700px;
+           margin-left:160px;
+            margin-top: 650px;
+           
+        }
+
+        .hover-container img {
+            width: 330px;
+            height:320px;
+            object-fit: cover;
+            display: block;
+        }
+        .hover-container1 img {
+            width: 330px;
+            height:320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hover-container2 img {
+            width: 330px;
+            height:700px;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 330px;
+            height: 320px;
+            background-color: rgba(0, 0, 0, 0); /* 기본적으로 투명 */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            opacity: 0; /* 기본적으로 보이지 않음 */
+            transition: background-color 0.3s ease, opacity 0.3s ease; /* 부드러운 전환 */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 330px;
+            height: 700px;
+            background-color: rgba(0, 0, 0, 0); /* 기본적으로 투명 */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            opacity: 0; /* 기본적으로 보이지 않음 */
+            transition: background-color 0.3s ease, opacity 0.3s ease; /* 부드러운 전환 */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .overlay1 b {
+            margin-top: 10px; /* 텍스트 위쪽 여백 */
+        }
+
+        .hover-container:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 표시 */
+            opacity: 1; /* 텍스트 보이기 */
+        }
+        .hover-container1:hover .overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 표시 */
+            opacity: 1; /* 텍스트 보이기 */
+        }
+        .hover-container2:hover .overlay1 {
+            background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 표시 */
+            opacity: 1; /* 텍스트 보이기 */
+        }
+        .overlayed-image {
+    position: absolute;
+  
+    width: 350px; /* 겹칠 이미지 크기 고정 */
+    height: 350px;
+    z-index: 10; /* grid1-01.png 위에 표시 */
+}
+.overlayed-image1 {
+    position: absolute;
+  
+    width: 350px; /* 겹칠 이미지 크기 고정 */
+    height: 700px;
+    z-index: 10; /* grid1-01.png 위에 표시 */
+}
+        #img1{
+
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 500px;
+          
+        }
+    
+      
+       
+        #img1 img{
+            width: 350px;
+            height: 350px;
+    
+        }
+        #p1{
+            color: #333;
+            position: absolute;
+            margin-top: 1170px;
+            margin-left: 1344px;
+            font-size: 12px;
+        }
+
+        #img2{
+
+            position: absolute;
+            margin-top: 801px;
+            margin-left: 20px
+        }
+        #img2 img{
+            width: 370px;
+            height: 350px;
+
+        }
+        #p2{
+            color: #333;
+            position: absolute;
+            margin-top: 1200px;
+            margin-left: 30px;
+            font-size: 15px;
+        }
+
+        #img3{
+
+            position: absolute;
+            margin-top: 1020px;
+            margin-left: 475px
+        }
+        #img3 img{
+            width: 370px;
+            height: 350px;
+
+        }
+        #p3{
+            color: #333;
+            position: absolute;
+            margin-top: 820px;
+            margin-left: 420px;
+            font-size: 15px;
+        }
+
+         #img4{
+
+            position: absolute;
+            margin-top: 2050px;
+            margin-left: 700px
+        }
+        #img4 img{
+            width: 390px;
+            height: 390px;
+
+        }
+        #p4{
+            color: #333;
+            position: absolute;
+            margin-top: 2150px;
+            margin-left: 1110px;
+            font-size: 15px;
+        }
+
+         #img5{
+
+            position: absolute;
+            margin-top: 1450px;
+            margin-left: 450px
+        }
+        #img5 img{
+            width: 500px;
+            height: 500px;
+
+        }
+        #p5{
+            color: #333;
+            position: absolute;
+            margin-top: 1600px;
+            margin-left: 1110px;
+            font-size: 17px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 2800px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="bouhaus-01.png" alt=""></a>
+        </div>
+        <nav>
+            <a href="about1.html">About Bauhaus</a>
+            <a href="sample.html">Timeline</a>
+            <a href="modern-applications.html">Modern Applications</a>
+            <a href="design-gallery.html">Design Gallery</a>
+            <a href="key-figures.html">Key Figures</a>
+        </nav>
+    </header>
+
+    <h1>Key Figures</h1>
+
+   <div class="hero-container">
+       <div class="hover-container overlayed-image">
+          <img src="bauhaus_1_04.webp" alt="">
+          <div class="overlay">
+           발터 그로피우스 <br>
+           바우하우스의 초대 교장.알마의 수기를 보면 그로피우스는 "모든 의미에서 아름다운 사람이며 천재적인 예술가이다."라고 쓰여있다
+        </div> 
+        </div>
+       <img class="background-image" src="grid1-01.png" alt="">
+    </div>
+
+    <div class="hero-container">
+        <div class="hover-container1 overlayed-image">
+           <img src="스크린샷 2024-12-13 123917.png" alt="">
+           <div class="overlay">
+            미스 반 데어 로에 <br>
+            1930년부터 1933년까지 바우하우스의 교장을 했으며 브로셀로나 의자와 같은 기념비적인 디자인을 남겼다.
+         </div> 
+         </div>
+        <img class="background-image" src="grid1-01.png" alt="">
+     
+     </div>
+
+     <div class="hero-container">
+        <div class="hover-container2 overlayed-image1">
+           <img src="8ypaEjkoH_hH8KPgmIEW_LG3-3rf_SItHbNF6OkKuJ0eFDSDqfxtTUe72Hn3rl3FbtXhn6OgPyt7H0oXlPmYLw.webp" alt="">
+           <div class="overlay1">
+            칸딘스키 <br>
+            위대한 유토피아라는 바우하우스의 목표를 가진 인물로 현대기술과 과학지식의 습득을 강조하였다.
+         </div> 
+         </div>
+        <img class="background-image" src="grid1-01.png" alt="">
+     
+     </div>
+
+    
+
+
+
+    <footer>
+        <p>&copy; 2024 Bauhaus Aesthetics | <a href="#">Learn More</a></p>
+    </footer>
+</body>
+</html>

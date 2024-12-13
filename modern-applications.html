@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bauhaus Modern Applications</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f6f3;
+            color: #333;
+
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 32px;
+        }
+
+        .logo img {
+            width: 110px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .hero-container {
+            text-align: center;
+            padding: 50px 20px;
+            
+            
+        }
+
+        .hero-container h1 {
+            font-size: 2.5em;
+            margin-top: 110px;
+            
+        }
+
+        .hero-container p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1 1 calc(33.333% - 20px);
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #f44336;
+        }
+
+        .card-content p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            margin-top: 300px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="bouhaus-01.png" alt="Bauhaus Logo"></a>
+        </div>
+        <nav>
+            <a href="about1.html">About Bauhaus</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="modern-applications.html">Modern Applications</a>
+            <a href="design-gallery.html">Design Gallery</a>
+            <a href="key-figures.html">Key Figures</a>
+        </nav>
+    </header>
+
+    <div class="hero-container">
+        <h1>Modern Applications of Bauhaus</h1>
+        <p>바우하우스는 현대 건물을 정의하는 깔끔하고 기하학적인 디자인에 영감을 주었다.</p>
+    </div>
+
+    <div class="section">
+        <div class="card">
+            <img src="AKR20190920073900805_01_i.jpg" alt="Modern Architecture">
+            <div class="card-content">
+                <h3>Modern Architecture</h3>
+                <p>바우하우스는 현대 건물을 정의하는 깔끔하고 기하학적인 디자인에 영감을 주었다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="072512_0729_Bauhou6.png" alt="Industrial Design">
+            <div class="card-content">
+                <h3>Industrial Design</h3>
+                <p>가구, 가전제품 등의 제품에는 바우하우스의 기능성과 미학이 담겨 있다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="부산인테리어_오알크루_바우하우스(6).jpg" alt="Graphic Design">
+            <div class="card-content">
+                <h3>Graphic Design</h3>
+                <p>미니멀리스트 타이포그래피와 레이아웃 스타일은 바우하우스 전통에 뿌리를 두고 있습니다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="2.png" alt="UI/UX Design">
+            <div class="card-content">
+                <h3>UI/UX Design</h3>
+                <p>현대적인 사용자 인터페이스는 단순성과 유용성에 대한 바우하우스스 원칙을 반영한다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="Prada_(4)_사본.jpg" alt="Fashion">
+            <div class="card-content">
+                <h3>Fashion</h3>
+                <p>의류의 대담한 색상과 기하학적 패턴은 바우하우스 예술에서 영감을 얻는다.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="image_readtop_2019_755639_0_111610.jpg" alt="Education">
+            <div class="card-content">
+                <h3>Design Education</h3>
+                <p>바우하우스는 전 세계 디자인 학교와 커리큘럼에 계속해서 영향을 미치고 있습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bauhaus Aesthetics | <a href="#">Learn More</a></p>
+    </footer>
+</body>
+</html>

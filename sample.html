@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bauhaus Timeline</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f6f3;
+            color: #333;
+            display: flex;             /* flexbox 사용 */
+            flex-direction: column; 
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 32px;
+        }
+
+        .logo img {
+            width: 110px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .timeline-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 50px 0;
+            list-style: none;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background-color: #000;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 20px 0;
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+
+        .timeline-item.left {
+            left: 0;
+        }
+
+        .timeline-item.right {
+            left: 50%;
+            transform: translateX(10%);
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.5em;
+            color: #f44336;
+        }
+
+        .timeline-item p {
+            margin: 10px 0 0;
+        }
+
+        .timeline-item span {
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .timeline-item.left span {
+            right: -10px;
+        }
+
+        .timeline-item.right span {
+            left: -10px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+        h1{
+            font-size: 50px;
+            margin-top: 110px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="bouhaus-01.png" alt=""></a>
+        </div>
+        <nav>
+            <a href="about1.html">About Bauhaus</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="modern-applications.html">Modern Applications</a>
+            <a href="design-gallery.html">Design Gallery</a>
+            <a href="key-figures.html">Key Figures</a>
+        </nav>
+    </header>
+
+    <div class="timeline-container">
+        <h1 style="text-align: center;">Bauhaus Timeline</h1>
+        <ul class="timeline">
+            <li class="timeline-item left">
+                <h3>1919</h3>
+                <p>발터 그로피우스(Walter Gropius)는 독일 바이마르에 공예와 미술을 결합한 바우하우스를 설립한다.</p>
+                <span></span>
+            </li>
+            <li class="timeline-item right">
+                <h3>1923</h3>
+                <p>The Bauhaus adopts a new focus on modern industrial design and functionality.</p>
+                <span></span>
+            </li>
+            <li class="timeline-item left">
+                <h3>1925</h3>
+                <p>The Bauhaus moves to Dessau, where it achieves international acclaim for its design principles.</p>
+                <span></span>
+            </li>
+            <li class="timeline-item right">
+                <h3>1933</h3>
+                <p>The Nazi regime forces the closure of the Bauhaus, but its influence spreads worldwide.</p>
+                <span></span>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bauhaus Aesthetics | <a href="#">Learn More</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f6f3;
+            color: #333;
+            display: flex;             /* flexbox 사용 */
+            flex-direction: column;    /* 세로로 배치 */ 
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 32px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            text-transform: uppercase;
+            z-index: 2;
+            position: relative;
+            text-align: center;
+         
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            padding: 16px 0;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 110px;
+            height: 60px;
+            margin-right: 10px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        .hero-container {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hero {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: center;
+            padding: 16px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin: 0;
+            background: linear-gradient(45deg, #f44336, #2196f3, #ffeb3b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-top: 16px;
+        }
+
+        .rotate-image {
+            width: 300px;
+            height: 80%;
+            transform: rotate(90deg); /* 90도로 이미지를 회전 */
+        }
+
+        .geo-shapes {
+           
+        }
+
+        .geo-shapes div {
+
+        }
+
+        .square {
+            background-color: #f1d539;
+            margin-left: 215px;
+            width:500px;
+            height: 500px;
+            position: absolute;
+        }
+        .square1{
+            background-color: #2a70aa;
+            width: 600px;
+            height: 1230px;
+            margin-left: 900px;
+            margin-top: 20px;
+            position: absolute;
+        }
+        .square2{
+            background-color: #c92727;
+            width: 1200px;
+            height: 300px;
+            margin-left: 200px;
+            margin-top: 1500px;
+            position: absolute;
+        }
+
+
+        h1{
+            margin-top: 150px;
+        }
+        h2{
+            font-size: 90px;
+            position: absolute;
+            margin-top: 870px;
+            margin-left: 250px;
+            text-align: center;
+            color: white;
+
+        }
+        h3{
+            color: white;
+            position: absolute;
+            font-size: 50px;
+            margin-left: 950px;
+            margin-top: 1300px;
+        }
+        h4{
+            color: white;
+            position: absolute;
+            font-size: 40px;
+            margin-left: 220px;
+            margin-top: 2320px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 25px 0;
+            margin-top: 2000px
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 15px;
+        }
+
+        footer a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #line1 img {
+            margin-left: 200px;
+            width: 300px;
+            height: 200px;
+        }
+        #line2 img{
+            margin-left: 100px;
+            width: 80%;
+            height: 200px;
+            transform: rotate(90deg);
+            margin-top: 400px;
+            position: absolute;
+        }
+        #line3 img{
+            margin-left: 300px;
+            width: 80%;
+            height: 200px;
+            margin-top: 500px;
+            position: absolute;
+        }
+        #line4 img {
+        
+            width: 600px;
+            height: 200px;
+            position: absolute;
+            margin-top: 1300px;
+        }
+        #line5 img{
+            margin-left: 900px;
+            width: 80%;
+            height: 200px;
+            transform: rotate(90deg);
+            margin-top: 900px;
+            position: absolute;
+        }
+        #about{
+            color: white;
+            margin-top: 1000px;
+            position: absolute;
+            margin-left: 950px;
+            font-size: 15px;
+        }
+        #principles{
+            color: white;
+            margin-top: 1420px;
+            position: absolute;
+            margin-left: 950px;
+            font-size: 15px;
+        }
+        #main img{
+            margin-top: 750px;
+            position: absolute;
+            margin-left: 210px;
+            width: 500px;
+            height: 60%;
+        }
+        #Influence{
+            color: white;
+            margin-top: 2430px;
+            position: absolute;
+            margin-left: 230px;
+            font-size: 16px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="main3.html"><img src="bouhaus-01.png" alt=""></a>
+        </div>
+        <nav>
+            <a href="about1.html">About Bauhaus</a>
+            <a href="timeline.html">Timeline</a>
+            <a href="modern-applications.html">Modern Applications</a>
+            <a href="design-gallery.html">Design Gallery</a>
+            <a href="key-figures.html">Key Figures</a>
+        </nav>
+    </header>
+
+    <h1>About Bauhaus</h1>
+    <p>The Birthplace of Modern Design</p>
+
+    
+    
+    <div class="rotate-image">
+        <img src="line-01.png" alt="">
+    </div>
+
+    <div id="line1">
+        <img src="line-01.png" alt="">
+    </div>
+    
+    <div class="geo-shapes">
+        <div class="circle"></div>
+        <div class="square"></div>
+    </div>
+
+    <h2>What <br>is <br>Bauhaus?</h2>
+    
+    
+    <div id="line2">
+        <img src="line-01.png" alt="">
+    </div>
+
+    <div class="geo-shapes">
+        <div class="square1"></div>
+    </div>
+    <div class="geo-shapes">
+        <div class="square2"></div>
+    </div>
+
+    <div id="line3">
+        <img src="line-01.png" alt="">
+    </div>
+
+    <div id="line4">
+        <img src="line-01.png" alt="">
+    </div>
+
+    <div id="line5">
+        <img src="line-01.png" alt="">
+    </div>
+
+    <div id="about">
+        슈타틀리헤스 바우하우스(독일어: Staatliches Bauhaus), 혹은 줄여서<br> 
+        바우하우스는 1919년 독일 바이마르에서 발터 그로피우스가설립한 예술,<br> 
+        건축, 디자인 분야의 혁명적인 학교이이다. 바우하우스의 양식은 현대식<br> 
+        건축과 디자인에 큰 영향을 주게 되었다. 이는 미술과공예의 통합을 <br>
+        강조하고 순수 미술과 응용 미술 사이의 전통적인 장벽을 무너뜨렸다.
+    </div>
+
+    <h3>Core Principles</h3>
+    <div id="principles">
+        바우하우스 디자인은 단순함, 기능성, 기하학적 형태의 사용이 특징이이다. <br>
+         "형태는 기능을 따른다"라는 모토는 물체의 디자인이 주로 의도된 목적에 <br>
+         기초해야 한다는 믿음을 반영한다.
+    </div>
+
+    <div id="main">
+        <img src="fa228deae6e23cf00c3e4486958dc0f6.jpg" alt="">
+    </div>
+
+    <h4>Lasting Influence</h4>
+    <div id="Influence">
+        정치적 압력으로 인해 1933년에 폐쇄되었음에도 불구하고 
+        바우하우스 운동은 현대 디자인, 건축, 예술에 지대한 영향을 미쳤다. <br>그 원칙은 전 세계 디자이너와 건축가에게 계속해서 영감을 주고 있다.
+    </div>
+
+    
+
+    <footer>
+        <p>&copy; 2024 Bauhaus Aesthetics | <a href="#">Learn More</a></p>
+    </footer>
+</body>
+</html>
