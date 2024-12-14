@@ -98,10 +98,10 @@
         }
         .hover-container {
             position: absolute;
-            width: 330px;
-            height: 320px;
-           margin-left: 520px;
-            margin-top: 320px;
+            width: 334px;
+            height: 318px;
+           margin-left: 517px;
+            margin-top: 319px;
            
         }
 
@@ -116,16 +116,24 @@
         
         .hover-container2{
             position: absolute;
-            width: 320px;
-            height: 700px;
+            width: 319px;
+            height: 675px;
+           margin-left:165px;
+            margin-top: 655px;
+           
+        }
+        .hover-container3{
+            position: absolute;
+            width: 690px;
+            height: 320px;
            margin-left:160px;
-            margin-top: 650px;
+            margin-top: 1369px;
            
         }
 
         .hover-container img {
-            width: 330px;
-            height:320px;
+            width: 334px;
+            height:318px;
             object-fit: cover;
             display: block;
         }
@@ -137,8 +145,14 @@
         }
 
         .hover-container2 img {
-            width: 330px;
-            height:700px;
+            width: 318px;
+            height:680px;
+            object-fit: cover;
+            display: block;
+        }
+        .hover-container3 img {
+            width: 690px;
+            height:300px;
             object-fit: cover;
             display: block;
         }
@@ -148,8 +162,8 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 330px;
-            height: 320px;
+            width: 334px;
+            height: 318px;
             background-color: rgba(0, 0, 0, 0); /* 기본적으로 투명 */
             color: white;
             display: flex;
@@ -168,8 +182,28 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 330px;
-            height: 700px;
+            width: 318px;
+            height: 680px;
+            background-color: rgba(0, 0, 0, 0); /* 기본적으로 투명 */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            opacity: 0; /* 기본적으로 보이지 않음 */
+            transition: background-color 0.3s ease, opacity 0.3s ease; /* 부드러운 전환 */
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .overlay2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 690px;
+            height: 300px;
             background-color: rgba(0, 0, 0, 0); /* 기본적으로 투명 */
             color: white;
             display: flex;
@@ -200,18 +234,29 @@
             background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 표시 */
             opacity: 1; /* 텍스트 보이기 */
         }
+        .hover-container3:hover .overlay2 {
+            background-color: rgba(0, 0, 0, 0.7); /* 어두운 배경 표시 */
+            opacity: 1; /* 텍스트 보이기 */
+        }
         .overlayed-image {
     position: absolute;
   
-    width: 350px; /* 겹칠 이미지 크기 고정 */
-    height: 350px;
+    width: 334px; /* 겹칠 이미지 크기 고정 */
+    height: 318px;
     z-index: 10; /* grid1-01.png 위에 표시 */
 }
 .overlayed-image1 {
     position: absolute;
   
-    width: 350px; /* 겹칠 이미지 크기 고정 */
-    height: 700px;
+    width: 318px; /* 겹칠 이미지 크기 고정 */
+    height: 680px;
+    z-index: 10; /* grid1-01.png 위에 표시 */
+}
+.overlayed-image2 {
+    position: absolute;
+  
+    width: 690px; /* 겹칠 이미지 크기 고정 */
+    height: 350px;
     z-index: 10; /* grid1-01.png 위에 표시 */
 }
         #img1{
@@ -340,7 +385,7 @@
         </div>
         <nav>
             <a href="about1.html">About Bauhaus</a>
-            <a href="sample.html">Timeline</a>
+            <a href="timeline.html">Timeline</a>
             <a href="modern-applications.html">Modern Applications</a>
             <a href="design-gallery.html">Design Gallery</a>
             <a href="key-figures.html">Key Figures</a>
@@ -383,6 +428,19 @@
         <img class="background-image" src="grid1-01.png" alt="">
      
      </div>
+
+     <div class="hero-container">
+        <div class="hover-container3 overlayed-image2">
+           <img src="Paul-Klee-Photo.jpg" alt="">
+           <div class="overlay2">
+            파울 클레 <br>
+            자연을 콩해 얻은 경험을 분석하고 표현하였으며 무의식 발전과 절제능력을 강조하였다.
+         </div> 
+         </div>
+        <img class="background-image" src="grid1-01.png" alt="">
+     
+     </div>
+
 
     
 
